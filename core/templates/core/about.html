@@ -1,7 +1,7 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
-{% block title %}{{ mi_nombre }} - Acerca de{% endblock %}
+{% block title %}{{ persona.nombres }} {{ persona.apellidos }} - Acerca de{% endblock %}
 
 {% block cabecera %}
 <header class="masthead" style="background-image: url('{% static 'core/img/about-bg.jpg' %}')">
@@ -23,11 +23,11 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-3 col-md-4 offset-lg-1">
-      <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg' %}" alt="{{ mi_nombre }}">
+      <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg' %}" alt="{{ persona.nombres }}">
     </div>
     <div class="col-lg-7 col-md-8">
-      <h2 class="section-heading">{{ mi_nombre }}</h2>
-      <p>{{ biografia }}</p>
+      <h2 class="section-heading">{{ persona.nombres }} {{ persona.apellidos }}</h2>
+      <p>{{ persona.biografia }}</p>
       {% if biografia_extra %}
         <p>{{ biografia_extra }}</p>
       {% endif %}

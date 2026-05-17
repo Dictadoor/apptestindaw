@@ -1,7 +1,7 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
-{% block title %}{{ mi_nombre }} - Contacto{% endblock %}
+{% block title %}{{ persona.nombres }} {{ persona.apellidos }} - Contacto{% endblock %}
 
 {% block cabecera %}
 <header class="masthead" style="background-image: url('{% static 'core/img/contact-bg.jpg' %}')">
@@ -23,11 +23,9 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
-      <p>{{ descripcion_contacto }}</p>
+      <p>{{ persona.dedicacion }}</p>
       <br>
-      {% if telefono %}
-        <p><b>Teléfono:</b> {{ telefono }}</p>
-      {% endif %}
+      <p><b>Teléfono:</b> {{ persona.telefono }}</p>
       {% if honorarios %}
         <p><b>Honorarios:</b> {{ honorarios }}</p>
       {% endif %}
