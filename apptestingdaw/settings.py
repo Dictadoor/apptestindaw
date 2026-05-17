@@ -79,8 +79,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'daw',
-        'USER': 'postgres',      # El usuario por defecto suele ser postgres
-        'PASSWORD': 'drakonix17Cc.', # La contraseña que pusiste al instalar Postgres
+        'USER': 'postgres',
+        'PASSWORD': 'drakonix17Cc.',
         'HOST': 'localhost',
         'PORT': '5432',
     }
